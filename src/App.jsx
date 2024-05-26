@@ -1,23 +1,19 @@
-import React from 'react'
-// import {Route , Routes, Switch} from "react-router-dom"
-import About from "./Component/About"
-import User from "./Component/User"
-import Faltu from './Component/Faltu'
-import { Route, Routes } from 'react-router-dom'
+import React, { useState, useEffect } from 'react'
+import { BrowserRouter as Router } from 'react-router-dom'
+import MainRouter from './Component/MainRouter'
+import Nav from './Component/Nav'
+import axios from 'axios'
 
 const App = () => {
-  return (
-  
-  <>
-  <Routes>
-    <Route path='/about' Component={About}></Route>
-    <Route path='/user' Component={User}></Route>
-    <Route path='*' Component={Faltu}></Route>
 
-  </Routes>
-  </> 
+  return (
     
+      <>
+        <Nav />
+        <MainRouter />
     
+      </>
+   
   )
 }
 
